@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Wordpressutvikling - profesjonelle bedriftssider for Wordpress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utvikling på Wordpress for beriftsmarkedet">
+    <meta name="author" content="frontkom">
+    <meta property="og:title" content="Wordpressutvikling - profesjonelle bedriftssider for Wordpress" />
+    <meta property="og:description" content="Utvikling på Wordpress for beriftsmarkedet" />
+    <meta property="og:url" content="http://front.github.io/wordpressutvikling/" />
+    <meta property="og:image" content="http://front.github.io/wordpressutvikling//assets/img/og-image.jpg" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <!-- Le styles -->
+    <link href="/assets/less/style.min.css" rel="stylesheet"> 
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    <!-- Le fav  -->
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='/assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+
+    <!--Has to be in head, to lazy load images.
+    Minimize in production. -->
+
+    <script src="/assets/js/lazyload.js"></script>
+    <script src="/assets/js/jRespond.js"></script>
+    <script src="/assets/js/spin.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/lightbox.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <script src="/assets/js/responsive-nav.js"></script>
+
+    <!-- Main js fail. -->
+    <script src="/assets/js/main.js"></script>
+
+    <!-- History just for index page -->
+    <script src="/assets/js/jquery.history.js"></script>
+    <script>
+        // History, and back button
+
+    $(function() {
+    jQuery.history.listen()
+      $('#nav .nav .scroll').click(function() {
+      $.history.push('index.html' + $(this).attr('href')); 
+      });
+    });
+    </script>
+  </head>
+
+  <!-- activate scrollspy -->
+  <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+       <!-- Nav button -->
+      <a id="toggle"  class="closed">
+        <i class="icon-reorder"></i>
+      </a>
+
+      <!-- Navigation -->
+      <header class="navbar navbar-fixed-top">
+        <div class="inner-page">
+          <h1 class="logo">Front Wordpressutvikling</h1>
+            <div id="nav">
+              <ul class="nav">
+                <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Forside</a></li>
+                <li><a title="Tjenester" href="#features" class=" scroll brand-4">Tjenester</a></li>
+                <li><a title="WP" href="#wp" class="scroll brand-3">Om WP</a></li>
+                <li><a title="Visjon" href="#assets" class="scroll brand-3">Visjon</a></li>
+                <li><a title="Om oss" href="#about" class="scroll fadeto brand-4"> Om oss</a></li>
+                <li><a title="Kontakt" href="#contact" class="scroll brand-2">Kontakt</a></li>
+              </ul>
+            </div>
+        </div> 
+      </header>
+      
+      {{ content }}
+
+      <!-- The footer, social media icons, and copyright -->        
+      <footer class="page color-5">
+        <div class="inner-page row-fluid">
+          <div class="span6 social">
+            <a href="http://twitter.com/frontkom"><i class="icon-twitter"></i></a>
+            <a href="http://github.com/front"><i class="icon-github-sign"></i></a>    
+            <a href="https://www.facebook.com/frontkom"><i class="icon-facebook-sign"></i></a>
+            <a href="https://plus.google.com/u/1/100067767000653163160/posts"><i class="icon-google-plus-sign"></i></a>
+          </div>
+          <div class="span6 text-right copyright">
+            &copy; <a  href="http://wordpressutvikling.no"  title="wordpressutvikling">Front WP</a>  |  <a href="#top"   title="Til toppen" class="scroll">Til toppen <i class="icon-caret-up"></i></a>
+          </div>
+        </div>
+      </footer>
+
+  </body>
+</html>
