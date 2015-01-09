@@ -6036,3 +6036,10 @@ html {
 #WebToLeadForm label:first-child {
   margin-top: 0;
 }
+/* Helper class */
+.center {
+  text-align: center;
+}
+.space-bottom {
+  margin-bottom: 30px;
+}
